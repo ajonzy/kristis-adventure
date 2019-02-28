@@ -1,28 +1,37 @@
-html {
-    font-size: 62.5%; // 1rem is 10px
-}
-
-*,
-*::after,
-*::before {
-    margin: 0;
-    padding: 0;
-    box-sizing: inherit;
-    font-family: 'montserrat';
-}
-
-body {
-    overflow-x: hidden;
-    font-weight: normal;
-
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    text-rendering: optimizeLegibility;
-    -webkit-tap-highlight-color: transparent;
-}
-
 .app {
-    margin-top: 2rem;
-    display: grid;
-    justify-items: center;
+    height: 100vh;
+    width: 100vw;
+    background-color: rgb(5, 5, 44);
+    display: flex;
+    justify-content: center;
+    .output {
+        color: white;
+        background-color: black;
+        width: 500px;
+        height: 300px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 50px 0px;
+    }
+    .buttons {
+        display: flex;
+        justify-content: space-around;
+        .button {
+            height: 30px;
+            width: 80px;
+            background-color: black;
+            border-radius: 20px;
+            text-align: center;
+            color: white;
+        }
+        .secret-button {
+            height: 30px;
+            width: 80px;
+            background-color: rgb(5, 5, 44);
+            border-radius: 20px;
+        }
+    }
 }
