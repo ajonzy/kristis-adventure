@@ -6,6 +6,7 @@ export default function(props) {
             <p className="output">You stoke the fire. That will keep the place nice and warm!</p>
             <div className="buttons">
             <p className="button" onClick={() => props.handler("cabin")}>Nice!</p>
+            <p className="secret-button" onClick={() => props.handler("party")}></p>
             </div>
         </div>
     )

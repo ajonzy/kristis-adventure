@@ -10,6 +10,7 @@ import Woods from "./rooms/woods"
 import Fire from "./rooms/fire"
 import Upstairs from "./rooms/upstairs"
 import Sleep from "./rooms/sleep"
+import Party from "./rooms/party"
 
 export default class App extends Component {
   constructor(props) {
@@ -90,6 +91,13 @@ export default class App extends Component {
         return (
           <div className='app'>
             <Sleep handler={this.handleRoomChange}/>
+          </div>
+        )
+      }
+      case "party": {
+        return (
+          <div className='app'>
+            <Party handler={this.handleRoomChange}/>
           </div>
         )
       }
