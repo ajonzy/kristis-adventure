@@ -7,22 +7,25 @@ export default class App extends Component {
     super(props)
 
     this.state = {
-      room: "start"
+      room: "start",
+      keyFound: false
     }
 
     this.handleRoomChange = this.handleRoomChange.bind(this)
   }
 
-  handleRoomChange(newRoom) {
+  handleRoomChange(newRoom, key=this.state.keyFound) {
     this.setState({
-      room: newRoom
+      room: newRoom,
+      keyFound: key
     })
   }
 
   render() {
     return (
-      <div>
-        <Room room={this.state.room} handler={this.handleRoomChange} />
+      <div className="app">
+        <h3>Kristi's<br/>Adventure</h3>
+        <Room state={this.state} handler={this.handleRoomChange} />
       </div>
     )
   }

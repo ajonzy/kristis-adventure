@@ -13,80 +13,81 @@ import Sleep from "./rooms/sleep"
 import Party from "./rooms/party"
 
 export default function(props) {
-    switch (props.room) {
+    const { room, keyFound } = props.state
+    switch (room) {
         case "start": {
           return (
-            <div className='app'>
+            <div className="room">
               <Start handler={props.handler}/>
             </div>
           )
         }
         case "initial-room": {
           return (
-            <div className='app'>
+            <div className="room">
               <InitialRoom handler={props.handler}/>
             </div>
           )
         }
         case "cabin": {
           return (
-            <div className='app'>
+            <div className="room">
               <Cabin handler={props.handler}/>
             </div>
           )
         }
         case "outside": {
           return (
-            <div className='app'>
+            <div className="room">
               <Outside handler={props.handler}/>
             </div>
           )
         }
         case "garden": {
           return (
-            <div className='app'>
-              <Garden handler={props.handler}/>
+            <div className="room">
+              <Garden keyFound={keyFound} handler={props.handler}/>
             </div>
           )
         }
         case "woods": {
           return (
-            <div className='app'>
+            <div className="room">
               <Woods handler={props.handler}/>
             </div>
           )
         }
         case "fire": {
           return (
-            <div className='app'>
+            <div className="room">
               <Fire handler={props.handler}/>
             </div>
           )
         }
         case "upstairs": {
           return (
-            <div className='app'>
-              <Upstairs handler={props.handler}/>
+            <div className="room">
+              <Upstairs keyFound={keyFound} handler={props.handler}/>
             </div>
           )
         }
         case "sleep": {
           return (
-            <div className='app'>
+            <div className="room">
               <Sleep handler={props.handler}/>
             </div>
           )
         }
         case "party": {
           return (
-            <div className='app'>
+            <div className="room">
               <Party handler={props.handler}/>
             </div>
           )
         }
         case "end": {
           return (
-            <div className='app'>
+            <div className="room">
               <End handler={props.handler}/>
             </div>
           )
