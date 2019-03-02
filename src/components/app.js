@@ -24,7 +24,7 @@ export default class App extends Component {
   render() {
     return (
       <div className="app">
-        <h3>Kristi's<br/>Adventure</h3>
+        <h3>Kristi's<br/>Adventure<br/><span>Beta</span></h3>
         <Room state={this.state} handler={this.handleRoomChange} />
       </div>
     )
