@@ -1,0 +1,76 @@
+.app {
+    height: 100vh;
+    background-color: #140949;
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    h3 {
+        align-self: center;
+        height: 200px;
+        color: #EBAE02;
+        text-align: center;
+        font-family: 'Srisakdi', cursive;
+        font-size: 4em;
+        font-weight: 600;
+        transform: skewY(-8deg);
+    }
+    .output {
+        align-self: center;
+        color: #EBAE02;
+        font-size: 1.5em;
+        font-weight: 700;
+        background-color: #113B9D;
+        width: 550px;
+        height: 600px;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 25px;
+        box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+    }
+    .buttons {
+        align-self: center;
+        height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        .button {
+            height: 60px;
+            width: 400px;
+            background-color: #113B9D;
+            border-radius: 10px;
+            text-align: center;
+            color: #EBAE02;
+            font-size: 1.2em;
+            font-weight: 500;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            cursor: pointer;
+            box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.75);
+            margin: 10px 0px;
+            &:active {
+                transform: translateY(5px);
+                box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+            }
+        }
+        .secret-button {
+            height: 60px;
+            width: 400px;
+            background-color: #140949;
+            border-radius: 10px;
+        }
+    }
+}
+
+.room {
+    align-self: center;
+}
+
+.room * {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
