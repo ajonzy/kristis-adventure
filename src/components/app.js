@@ -8,23 +8,23 @@ export default class App extends Component {
 
     this.state = {
       room: "start",
-      keyFound: false
+      roomCount: 0
     }
 
     this.handleRoomChange = this.handleRoomChange.bind(this)
   }
 
-  handleRoomChange(newRoom, key=this.state.keyFound) {
+  handleRoomChange(newRoom) {
     this.setState({
       room: newRoom,
-      keyFound: key
+      roomCount: newRoom != "start" ? ++this.state.roomCount : 0
     })
   }
 
   render() {
     return (
       <div className="app">
-        <h3>Kristi's<br/>Adventure<br/><span>Beta</span></h3>
+        <h3>Kristi's<br/>Adventure</h3>
         <Room state={this.state} handler={this.handleRoomChange} />
       </div>
     )
