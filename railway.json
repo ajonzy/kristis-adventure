@@ -1,0 +1,9 @@
+{
+  "$schema": "https://railway.com/railway.schema.json",
+  "build": {
+    "buildCommand": "npm ci && npm run build"
+  },
+  "deploy": {
+    "startCommand": "npm run prod"
+  }
+}
